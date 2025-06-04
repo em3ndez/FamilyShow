@@ -30,7 +30,7 @@ You can also download a sample family
 
 Go to the Sample Windsor Familly section between V3.0 and V3.1 in the Release page
 
-Download  the file: **Family.Show-samplesWindsor_familly.zip** 
+Download  the file: **Family.Show-samplesWindsor_familly.zip** or the latest version.
 
 Unzip it to your folder
 
