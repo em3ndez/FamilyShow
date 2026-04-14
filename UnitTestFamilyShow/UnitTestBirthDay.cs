@@ -9,8 +9,8 @@ namespace UnitTestFamilyShow
     [TestMethod]
     public void TestMethod_StringToDate_no_slash()
     {
-      string source = "26061965";
-      DateTime expected = new DateTime(1, 1, 1);
+      const string source = "26061965";
+      DateTime expected = new(1, 1, 1);
       DateTime result = StringToDate(source);
       Assert.AreEqual(result, expected);
     }
@@ -18,8 +18,8 @@ namespace UnitTestFamilyShow
     [TestMethod]
     public void TestMethod_StringToDate_with_slash()
     {
-      string source = "08/05/1950";
-      DateTime expected = new DateTime(1950, 5, 8);
+      const string source = "08/05/1950";
+      DateTime expected = new(1950, 5, 8);
       DateTime result = StringToDate(source);
       Assert.AreEqual(result, expected);
     }
@@ -27,8 +27,8 @@ namespace UnitTestFamilyShow
     [TestMethod]
     public void TestMethod_StringToDate_string_empty()
     {
-      string source = "";
-      DateTime expected = new DateTime(1, 1, 1);
+      const string source = "";
+      DateTime expected = new(1, 1, 1);
       DateTime result = StringToDate(source);
       Assert.AreEqual(result, expected);
     }
@@ -36,8 +36,8 @@ namespace UnitTestFamilyShow
     [TestMethod]
     public void TestMethod_StringToDate_with_dash()
     {
-      string source = "08-05-1950";
-      DateTime expected = new DateTime(1950, 5, 8);
+      const string source = "08-05-1950";
+      DateTime expected = new(1950, 5, 8);
       DateTime result = StringToDate(source);
       Assert.AreEqual(result, expected);
     }
@@ -45,8 +45,8 @@ namespace UnitTestFamilyShow
     [TestMethod]
     public void TestMethod_StringToDate_with_dash_1_1_1()
     {
-      string source = "01-01-0001";
-      DateTime expected = new DateTime(1, 1, 1);
+      const string source = "01-01-0001";
+      DateTime expected = new(1, 1, 1);
       DateTime result = StringToDate(source);
       Assert.AreEqual(result, expected);
     }
@@ -59,7 +59,7 @@ namespace UnitTestFamilyShow
         dateString = "1/1/" + dateString;
       }
 
-      DateTime.TryParse(dateString, out DateTime date);
+      _ = DateTime.TryParse(dateString, out DateTime date);
 
       return date;
     }
